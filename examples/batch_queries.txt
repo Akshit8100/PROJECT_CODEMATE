@@ -1,0 +1,10 @@
+What time is it?
+Get current system information
+Read the sample invoices CSV file
+Calculate the sum of 10 + 20 + 30
+List files in the data directory
+Send an email with system status
+Get weather information for New York
+Analyze text and find email patterns
+Convert 100 USD to EUR
+Check if today is a weekend

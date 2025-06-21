@@ -1,0 +1,57 @@
+# AI Function Calling Pipeline Configuration
+
+# Model Configuration
+model:
+  name: "microsoft/DialoGPT-medium"  # Fallback model, will use Mistral if available
+  device: "auto"
+  max_length: 2048
+  temperature: 0.7
+  top_p: 0.9
+  
+# Alternative models to try (in order of preference)
+alternative_models:
+  - "mistralai/Mistral-7B-Instruct-v0.1"
+  - "microsoft/DialoGPT-medium"
+  - "gpt2-medium"
+
+# Function Library Configuration
+functions:
+  max_functions_per_query: 10
+  timeout_seconds: 30
+  retry_attempts: 3
+
+# Pipeline Configuration
+pipeline:
+  max_planning_iterations: 3
+  confidence_threshold: 0.8
+  parallel_execution: false
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
+  format: "{time} | {level} | {message}"
+
+# Demo Configuration
+demo:
+  examples_file: "examples/demo_queries.json"
+  output_format: "json"
+  verbose: true
+
+# Email Configuration (for demo functions)
+email:
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  # Note: Set EMAIL_USER and EMAIL_PASS as environment variables
+
+# Database Configuration
+database:
+  type: "sqlite"
+  path: "data/demo.db"
+  
+# File Paths
+paths:
+  data_dir: "data"
+  logs_dir: "logs"
+  examples_dir: "examples"
+  functions_dir: "src/functions"

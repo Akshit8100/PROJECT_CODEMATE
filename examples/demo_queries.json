@@ -1,0 +1,70 @@
+{
+  "demo_queries": [
+    {
+      "query": "Retrieve all invoices for March, summarize the total amount, and send the summary to my email",
+      "description": "Complex data processing and communication task",
+      "expected_functions": ["read_csv", "filter_data", "summarize_data", "send_email"]
+    },
+    {
+      "query": "Read the sales data from CSV file and calculate the average sales per month",
+      "description": "Data analysis task",
+      "expected_functions": ["read_csv", "group_by", "calculate_statistics"]
+    },
+    {
+      "query": "Send a notification to Slack about the current system status",
+      "description": "System monitoring and communication",
+      "expected_functions": ["get_system_info", "post_to_slack"]
+    },
+    {
+      "query": "Download the latest news headlines and save them to a file",
+      "description": "Web scraping and file operations",
+      "expected_functions": ["get_news", "write_json"]
+    },
+    {
+      "query": "Calculate the difference between today and Christmas, then format it nicely",
+      "description": "Date calculations and text formatting",
+      "expected_functions": ["get_current_time", "calculate_date_difference", "format_text"]
+    },
+    {
+      "query": "List all files in the data directory and create a backup",
+      "description": "File management operations",
+      "expected_functions": ["list_directory", "copy_file"]
+    },
+    {
+      "query": "Get weather information for New York and send it via email",
+      "description": "API integration and communication",
+      "expected_functions": ["get_weather", "send_email"]
+    },
+    {
+      "query": "Analyze the text in readme.txt and extract all email addresses",
+      "description": "Text processing and pattern extraction",
+      "expected_functions": ["read_file", "extract_patterns"]
+    },
+    {
+      "query": "Convert 100 USD to EUR and save the result to a spreadsheet",
+      "description": "Mathematical operations and file output",
+      "expected_functions": ["convert_units", "write_json"]
+    },
+    {
+      "query": "Check if the website example.com is accessible and log the result",
+      "description": "Web monitoring and logging",
+      "expected_functions": ["check_website_status", "write_file"]
+    }
+  ],
+  "simple_queries": [
+    "What time is it?",
+    "List available functions",
+    "Get system information",
+    "Read a CSV file",
+    "Send an email",
+    "Calculate 2 + 2",
+    "Get current directory",
+    "Check file info"
+  ],
+  "complex_queries": [
+    "Process the quarterly sales data, identify top performing products, create a summary report, and email it to the management team",
+    "Monitor system resources, check disk space, and if it's above 80% usage, send an alert notification",
+    "Download the company's latest financial report, extract key metrics, compare with previous quarter, and generate a trend analysis",
+    "Scan all log files for error patterns, categorize them by severity, create a dashboard summary, and schedule automated alerts"
+  ]
+}
